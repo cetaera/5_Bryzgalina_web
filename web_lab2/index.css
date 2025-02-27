@@ -5,7 +5,6 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    position: relative;
 }
 
 html, body {
@@ -15,7 +14,16 @@ html, body {
     flex-direction: column;
 }
 
+h1, h2, h3, p {
+    margin-bottom: 10px; 
+}
+
+ul {
+    padding-left: 20px;
+}
+
 .container {
+    flex-grow: 1;
     max-width: 1200px;
     margin: auto;
     padding: 20px;
@@ -44,6 +52,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
 }
 
 .reasons, .reviews {
@@ -93,7 +102,7 @@ main {
     position: absolute;
     top: 0;
     width: 200px;
-    height: 155vh;
+    min-height: 100%;
     background: black;
     color: yellow;
     display: flex;
@@ -112,7 +121,6 @@ main {
 .ad-block {
     padding: 10px;
     background: rgba(255, 0, 0, 0.8);
-    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px yellow;
     animation: blink 1s infinite alternate;
@@ -142,8 +150,6 @@ footer {
     border-top: 3px solid red;
     box-shadow: 0 0 10px white;
     width: 100%;
-    bottom: 0;
-    left: 0;
 }
 
 @keyframes blink {
@@ -194,7 +200,13 @@ footer {
     font-size: 18px;
 }
 
-/* Для экранов до 768px (планшеты и мобильные устройства) */
+@media (max-width: 1200px) {
+    .container {
+        margin-left: 220px; 
+        margin-right: 220px; 
+    }
+}
+
 @media (max-width: 768px) {
     body {
         background: linear-gradient(to bottom, #ff0000, #ff9900);
@@ -239,7 +251,6 @@ footer {
     }
 }
 
-/* Для экранов до 480px (мобильные устройства) */
 @media (max-width: 480px) {
     header {
         font-size: 16px;
@@ -271,4 +282,46 @@ footer {
         font-size: 12px;
         padding: 6px 10px;
     }
+}
+
+@media (max-width: 1024px) {
+    .side-ads {
+        position: static; 
+        width: 100%; 
+        height: auto; 
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .container {
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 90%; 
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 320px) {
+
+    header {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .tagline {
+        font-size: 12px;
+    }
+
+    .reasons, .reviews, .ads {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .review {
+        padding: 5px;
+        font-size: 10px;
+    }
+
 }
