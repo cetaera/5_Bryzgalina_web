@@ -3,9 +3,6 @@ function toggleSection(element) {
     content.style.display = content.style.display === "block" ? "none" : "block";
 }
 
-
-let boughtDonuts = false; 
-
 function startQuest() {
 
         alert("Добро пожаловать в безумное приключение с Дэдпулом в баре!");
