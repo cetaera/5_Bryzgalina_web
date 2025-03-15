@@ -16,6 +16,8 @@
         </header>
         
         <main>
+            <button id="theme-toggle">🌙</button>
+
             <div class="main-content">
                 <div class="ads-in-main left-ads">
                     <div class="ad-block">
@@ -50,12 +52,18 @@
 
                     <section class="reviews">
                         <h2>🤯 Что говорят наши довольные клиенты?</h2>
-                        <div class="review-grid">
-                            <article class="review">«Я надел Изолятор и успел к дедлайну!» – Иван</article>
-                            <article class="review">«Теперь я не слышу ни-че-го! Спасибо, Изолятор!» – Ольга</article>
-                            <article class="review">«Этот шлем спас мою курсовую работу!» – Сергей</article>
-                            <article class="review">«Друзья говорят, что я стал молчаливее. Ну и отлично!» – Андрей</article>
-                        </div>
+                    
+                        <div class="reviews-list" id="reviews-list"></div>
+                    
+                        <section class="add-review">
+                            <h2>Оставьте отзыв</h2>
+                            <form id="review-form">
+                                <input type="text" id="name" placeholder="Ваше имя" required>
+                                <textarea id="message" placeholder="Ваш отзыв" required></textarea>
+                                <input type="file" id="image" accept="image/*">
+                                <button type="submit">Отправить</button>
+                            </form>
+                        </section>
                     </section>
                 </div>
 
@@ -76,15 +84,14 @@
                         <button>Узнать больше</button>
                     </div>
                 </div>
-            </div>            
+            </div>   
+                     
             </section>
-
             <div class="ads">
                 <p>🎉 Успей купить со скидкой 99,99%!* (у вас ровно 5 минут) 🎉</p>
                 <p>💀 Надень Изолятор – забудь об оправданиях! 💀</p>
                 <p>🤫 Уникальная возможность скрыться от общества! 🤫</p>
             </div>
-            
             </section>
 
         </main>
