@@ -27,7 +27,6 @@ document.getElementById("theme-toggle").addEventListener("click", function () {
 });
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
     const reviewsList = document.getElementById("reviews-list");
     const reviewForm = document.getElementById("review-form");
@@ -97,7 +96,12 @@ document.addEventListener("DOMContentLoaded", function () {
         let imageUrl = "";
         if (imageInput.files.length > 0) {
             const file = imageInput.files[0];
-            imageUrl = URL.createObjectURL(file); 
+            if (file.type.includes('image')) {
+                imageUrl = URL.createObjectURL(file);
+            } else {
+                alert("Выбранный файл не является изображением.");
+                return;
+            }
         }
 
         // Добавляем новый отзыв в массив
