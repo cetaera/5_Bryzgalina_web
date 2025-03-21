@@ -193,3 +193,37 @@ input {
     padding: 5px;
     border-radius: 5px;
 }
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+        display: flex;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .block {
+        padding: 15px;
+    }
+
+    .block-title, .block-title input {
+        font-size: 1.1em;
+    }
+
+    .stat-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stat-value {
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    .avatar-image {
+        width: 80px;
+    }
+}
