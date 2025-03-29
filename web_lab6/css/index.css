@@ -1,0 +1,392 @@
+@import url("reset.css");
+
+body {
+    font-family: 'Adobe Garamond Pro Bold', serif;
+    background: #111;
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.container {
+    width: 50%;
+    margin: auto;
+    background: rgba(20, 20, 20, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #777;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex: 1; 
+}
+
+
+.image-block img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+header, footer {
+    background: #222;
+    color:#d4c8a8;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 24px; 
+    margin: 0; 
+    margin-bottom: 20px; 
+}
+
+footer {
+    font-size: 1em;
+    opacity: 0.8;
+    margin-top: auto;
+}
+
+
+.block {
+    background-color: #1c1c1c; 
+    color: #d4c8a8; 
+    border: 1px solid #3e3e3e; 
+    padding: 20px;
+    font-family:  'Adobe Garamond Pro Bold', serif; 
+    margin-bottom: 20px;
+}
+
+
+.block-title {
+    flex-grow: 1;
+    text-align: center; 
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.block-title, .block-title input {
+    font-size: 1.3em; 
+    font-family: 'Adobe Garamond Pro Bold', serif; 
+}
+
+
+.stat-list {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+
+
+.stat-item {
+    display: flex; 
+    align-items: center;
+    text-align: left;
+    justify-content: space-between; 
+    padding: 5px 0;
+    border-bottom: 1px solid #3e3e3e; 
+    font-size: 1.2em;
+}
+
+
+.stat-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+.stat-name {
+    flex-grow: 1; 
+    font-size: 1em;
+    text-align: left;
+}
+
+.stat-value {
+    text-align: right; 
+    font-size: 1em;
+}
+
+.level-block .level-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+
+}
+
+.level-block .level-name {
+    font-size: 1.2em;
+}
+
+.level-block .level-value {
+    text-align: right;
+    font-size: 1em;
+}
+
+.base-power-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.base-power-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #3e3e3e;
+    font-size: 1em;
+}
+
+.power-name {
+    font-size: 1em;
+}
+
+.power-value {
+    text-align: right;
+    font-size: 1em;
+}
+
+.text-block .stat-item {
+    text-align: center; /* Выравниваем текст по центру */
+    font-size: 1.3em;
+    border-bottom: 1px solid #3e3e3e;
+}
+
+.image-block .stat-item {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Выравнивание по горизонтали по центру */
+    border-bottom: 1px solid #3e3e3e;
+    padding: 10px;
+}
+
+.image-block .stat-name {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.avatar-image {
+    width: 100px;
+    height: auto;
+}
+
+.edit-mode .block {
+    border-color: #aaa;
+    background-color: #1c1c1c;
+}
+
+#editButton {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+input {
+    background-color: #1c1c1c; 
+    color: #d4c8a8; 
+    border: 2px solid #aaa; 
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Центрирование элементов навигации */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d4c8a8; /* Золотистый цвет текста */
+    font-weight: bold;
+    padding: 10px 20px;
+    background: rgba(51, 51, 51, 0.7); /* Полупрозрачный темно-серый фон */
+    border: 2px solid #777; /* Серая рамка */
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    display: block; /* Занимает всю ширину элемента li */
+    text-align: center; /* Центрирование текста */
+}
+
+/* Общие стили для кнопок */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Adobe Garamond Pro Bold', serif;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #d4c8a8; 
+    background-color: #333; 
+    border: 2px solid #777; 
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #555; 
+    color: #fff;
+    border-color: #aaa;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+    background-color: #222; 
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    transform: translateY(1px);
+}
+
+/* Стили для списка пользователей Reqres */
+#reqres-users-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#reqres-users-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #1c1c1c;
+    border: 1px solid #3e3e3e;
+    border-radius: 5px;
+    text-align: left;
+}
+
+#reqres-users-list li strong {
+    color: #d4c8a8; 
+}
+
+/* Стили для сообщений (успех и ошибка)  */
+#messages .success, #messages .error {
+    padding: 8px 12px; 
+    margin-bottom: 8px; 
+    border-radius: 4px; 
+    font-size: 0.9em; 
+    opacity: 0.8; 
+    transition: opacity 0.3s ease; 
+    font-family: Arial, sans-serif; 
+}
+
+#messages .success:hover, #messages .error:hover {
+    opacity: 1; /* Делаем более яркими при наведении */
+}
+
+#messages .success {
+    background-color: rgba(40, 100, 40, 0.5); /* Зеленоватый фон для успеха */
+    color: #d4c8a8;
+    border: 1px solid #555;
+}
+
+#messages .error {
+    background-color: rgba(100, 40, 40, 0.5); /* Красноватый фон для ошибки */
+    color: #d4c8a8;
+    border: 1px solid #555;
+}
+
+#messages h3 {
+    font-size: 1.1em; 
+    margin-bottom: 3px; 
+}
+
+#messages p {
+    margin: 0;
+}
+
+/* Стили для ссылок */
+a {
+    color: #d4c8a8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* Стили для заголовков */
+h2 {
+    color: #d4c8a8;
+    font-family: 'Adobe Garamond Pro Bold', serif;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Стили для параграфов */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Стили для контейнера изображений */
+#profile-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+        display: flex;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .block {
+        padding: 15px;
+    }
+
+    .block-title, .block-title input {
+        font-size: 1.1em;
+    }
+
+    .stat-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stat-value {
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    .avatar-image {
+        width: 80px;
+    }
+    nav ul {
+        flex-direction: column; /* Переключаем на вертикальное расположение */
+        align-items: center; /* Выравниваем по центру */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Добавляем отступ между кнопками */
+    }
+
+    nav ul li a {
+        padding: 10px; /* Уменьшаем отступы */
+        font-size: 1em; /* Уменьшаем размер шрифта */
+    }
+}
