@@ -77,7 +77,6 @@ export default function App() {
   >
     <h1 style={{ textAlign: "center", marginBottom: "1rem" }}>Каталог продуктов</h1>
 
-    {/* Форма сверху */}
     <form
       onSubmit={handleSubmit}
       style={{ display: "flex", flexDirection: "column", gap: "1rem", marginBottom: "1rem" }}
